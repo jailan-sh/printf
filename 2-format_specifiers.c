@@ -19,7 +19,6 @@ int check_for_format(char format, va_list *valist, int p, int *count)
 		{"s", print_string},
 		{"d", print_int},
 		{"i", print_int},
-		{"b", print_bin},
 		{NULL, NULL}
 	};
 
