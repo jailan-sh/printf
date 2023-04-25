@@ -52,8 +52,8 @@ void p_uint(unsigned int n, int *count)
 
 	while (result / 10)
 	{
-		factor *= 10;
-		result /= 10;
+		factor = factor * 10;
+		result = result / 10;
 	}
 	while (factor)
 	{
@@ -61,6 +61,6 @@ void p_uint(unsigned int n, int *count)
 		_putchar((result * sign) + '0');
 		*count = *count + 1;
 		n = n - (result * factor);
-		factor /= 10;
+		factor = factor / 10;
 	}
 }
