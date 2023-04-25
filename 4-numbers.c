@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * print_number - prints an integer
- * @n: input number to be printed
+ * print_number - prints integer
+ * @n: number to be printed
  * @count: count of bytes printed.
  *
  * Return: void
@@ -10,8 +10,8 @@
 
 void print_number(int n, int *count)
 {
-	int res = n;
-	int fact = 1;
+	int result = n;
+	int factor = 1;
 	int sign = 1;
 
 	if (n < 0)
@@ -21,24 +21,24 @@ void print_number(int n, int *count)
 		*count = *count + 1;
 	}
 
-	while (res / 10)
+	while (result / 10)
 	{
-		fact *= 10;
-		res /= 10;
+		factor = factor * 10;
+		result = result / 10;
 	}
-	while (fact)
+	while (factor)
 	{
-		res = n / fact;
-		_putchar((res * sign) + '0');
+		result = n / factor;
+		_putchar((result * sign) + '0');
 		*count = *count + 1;
-		n = n - (res * fact);
-		fact /= 10;
+		n = n - (result * factor);
+		factor = factor / 10;
 	}
 }
 
 /**
  * p_uint - prints an unsigned integer
- * @n: input number to be printed
+ * @n: number to be printed
  * @count: count of bytes printed.
  *
  * Return: void
@@ -46,21 +46,21 @@ void print_number(int n, int *count)
 
 void p_uint(unsigned int n, int *count)
 {
-	unsigned int res = n;
-	unsigned int fact = 1;
+	unsigned int result = n;
+	unsigned int factor = 1;
 	unsigned int sign = 1;
 
-	while (res / 10)
+	while (result / 10)
 	{
-		fact *= 10;
-		res /= 10;
+		factor *= 10;
+		result /= 10;
 	}
-	while (fact)
+	while (factor)
 	{
-		res = n / fact;
-		_putchar((res * sign) + '0');
+		result = n / factor;
+		_putchar((result * sign) + '0');
 		*count = *count + 1;
-		n = n - (res * fact);
-		fact /= 10;
+		n = n - (result * factor);
+		factor /= 10;
 	}
 }

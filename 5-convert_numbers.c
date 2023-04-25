@@ -25,7 +25,6 @@ void print_bin(va_list *valist, int p, int *count)
  */
 void p_bin(unsigned int n, int *count)
 {
-	/*Create an array big enough to store an unsigned int binary*/
 	int binNum[sizeof(unsigned int) * 8];
 	int i;
 
