@@ -1,7 +1,8 @@
 #include "main.h"
 
 /**
- * check_for_format - checks format if belongs to a special char to be printed.
+ * print_function - if belongs to a special char it will run
+ * function and print it.
  * @format: char that could describe the format in which next arg is printed.
  * @p: printing selection. If 0 no printing in stdout is done. If 1 print.
  * @valist: arguments list to be formated.
@@ -10,7 +11,7 @@
  * Return: 0 if no errors in format are found, 1 if format is not the correct.
  */
 
-int check_for_format(char format, va_list *valist, int p, int *count)
+int print_function(char format, va_list *valist, int p, int *count)
 {
 	int i = 0;
 

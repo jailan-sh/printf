@@ -19,17 +19,22 @@ typedef struct special_formats
 
 int _putchar(char c);
 void _puts(char *, int *);
+/*main printf and check*/
 int _printf(const char *format, ...);
 int check_in(const char *format, va_list *);
 int print_out(const char *format, va_list *);
-int check_for_format(char format, va_list *valist, int p, int *count);
+
+/*functions*/
+int print_function(char format, va_list *valist, int p, int *count);
 void print_char(va_list *valist, int p, int *count);
 void print_string(va_list *valist, int p, int *count);
 void print_int(va_list *valist, int p, int *count);
 void print_bin(va_list *valist, int p, int *count);
+void p_uint(unsigned int n, int *count);
+
+/*flags and convert numbers*/
+void print_number(int, int *);
 void p_bin(unsigned int n, int *count);
 void print_uint(va_list *valist, int p, int *count);
-void print_number(int, int *);
-void p_uint(unsigned int n, int *count);
 
 #endif
