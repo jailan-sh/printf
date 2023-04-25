@@ -31,12 +31,15 @@ void print_string(va_list *valist, int p, int *count);
 void print_int(va_list *valist, int p, int *count);
 void print_bin(va_list *valist, int p, int *count);
 void p_uint(unsigned int n, int *count);
-void print_octal(unsigned int, int *);
+void print_o(va_list *, int, int *count);
+void print_X(va_list *valist, int p, int *count);
 
-/*flags and convert numbers*/
+/*flags, convert numbers and aid functions*/
 void print_number(int, int *);
 void p_bin(unsigned int n, int *count);
 void print_uint(va_list *valist, int p, int *count);
 void print_o(va_list *, int, int *count);
+void print_octal(unsigned int, int *);
+void print_UpperX(va_list *valist, int p, int *count);
 
 #endif

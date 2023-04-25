@@ -23,6 +23,7 @@ int print_function(char format, va_list *valist, int p, int *count)
 		{"b", print_bin},
 		{"u", print_uint},
 		{"o", print_o},
+		{"X", print_X},
 		{NULL, NULL}
 	};
 
