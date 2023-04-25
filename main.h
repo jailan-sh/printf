@@ -40,6 +40,6 @@ void p_bin(unsigned int n, int *count);
 void print_uint(va_list *valist, int p, int *count);
 void print_o(va_list *, int, int *count);
 void print_octal(unsigned int, int *);
-void print_upperX(va_list *valist, int p, int *count);
+void print_upperX(unsigned int n, int *count);
 
 #endif
