@@ -22,6 +22,7 @@ int print_function(char format, va_list *valist, int p, int *count)
 		{"i", print_int},
 		{"b", print_bin},
 		{"u", print_uint},
+		{"o", print_octal},
 		{NULL, NULL}
 	};
 
