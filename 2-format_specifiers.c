@@ -24,6 +24,7 @@ int print_function(char format, va_list *valist, int p, int *count)
 		{"u", print_uint},
 		{"o", print_o},
 		{"X", print_X},
+		{"x", print_x},
 		{NULL, NULL}
 	};
 
