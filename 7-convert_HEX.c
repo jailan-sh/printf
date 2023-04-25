@@ -27,12 +27,10 @@ void print_X(va_list *valist, int p, int *count)
  */
 void print_upperX(unsigned int n, int *count)
 {
-	
-	int upperX;
 	int i;
 	char num = '#';
+	int upperX[sizeof(unsigned int) * 2];
 
-	upperX[sizeof(unsigned int) * 2]
 	i = 0;
 
 	if (n == 0)
