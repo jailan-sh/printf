@@ -1,3 +1,5 @@
+#include "main.h"
+
 /**
  * print_o - takes an unsigned int & prints it as octal.
  * @valist: va_list.
@@ -21,6 +23,7 @@ void print_o(va_list *valist, int p, int *count)
  * @count: bytes counting.
  * Return: void.
  */
+
 void print_octal(unsigned int n, int *count)
 {
 	int octalNum[sizeof(unsigned int) * 3];

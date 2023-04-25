@@ -32,6 +32,7 @@ void print_int(va_list *valist, int p, int *count);
 void print_bin(va_list *valist, int p, int *count);
 void p_uint(unsigned int n, int *count);
 void print_octal(unsigned int, int *);
+
 /*flags and convert numbers*/
 void print_number(int, int *);
 void p_bin(unsigned int n, int *count);
