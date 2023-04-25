@@ -1,15 +1,15 @@
 #include "main.h"
 
 /**
- * check_in - check format and arg according requirements.
- * @format: string holding characters and format of arguments to be checked.
+ * check_in - check format and arguments
+ * @format: string with characters as arguments.
  * @original: original list of arguments
  * Return: (0) success, (2) error
  */
 
 int check_in(const char *format, va_list *original)
 {
-	int i = 0, n_printed = 0;
+	int i = 0, num = 0;
 
 	while (format[i])
 	{
@@ -21,11 +21,11 @@ int check_in(const char *format, va_list *original)
 			{
 				i++;
 			}
-			else if (format[i]) /* correct format spec? */
+			else if (format[i])
 			{
-				check_for_format(format[i], original, 0, &n_printed);
+				print_function(format[i], original, 0, &num);
 			}
-			else /* error "%" */
+			else
 			{
 				return (1);
 			}
@@ -37,8 +37,8 @@ int check_in(const char *format, va_list *original)
 }
 
 /**
- * print_out - prints according to the check_input status
- * @format: string holding characters and format of arguments to be checked.
+ * print_out - prints output in case or right input
+ * @format: string with characters as an argument.
  * @copy: copy of the list of arguments
  * Return: number of charaters printed.
  */
@@ -46,14 +46,14 @@ int check_in(const char *format, va_list *original)
 int print_out(const char *format, va_list *copy)
 {
 
-	int i = 0, n_printed = 0;
+	int i = 0, num = 0;
 
 	while (format[i])
 	{
 		if (format[i] != '%')
 		{
 			_putchar(format[i]);
-			n_printed = n_printed + 1;
+			num = num + 1;
 		}
 
 		if (format[i] == '%')
@@ -62,15 +62,15 @@ int print_out(const char *format, va_list *copy)
 			if (format[i] == '%')
 			{
 				_putchar('%');
-				n_printed = n_printed + 1;
+				num = num + 1;
 			}
 			else
 			{
-				if (check_for_format(format[i], copy, 1, &n_printed))
+				if (print_function(format[i], copy, 1, &num))
 				{
 					_putchar('%');
 					_putchar(format[i]);
-					n_printed = n_printed + 2;
+					num = num + 2;
 				}
 			}
 		}
@@ -78,5 +78,5 @@ int print_out(const char *format, va_list *copy)
 			i++;
 	}
 
-	return (n_printed);
+	return (num);
 }

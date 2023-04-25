@@ -1,16 +1,15 @@
 #include "main.h"
 
 /**
- * _printf - prints according to a given format. printf Implementation.
- * @format: string holding characters and format of arguments to be printed.
- *
+ * _printf - function simulate printf implementation.
+ * @format: string of characters as an arguments.
  * Return: number of charaters printed.
  */
 
 int _printf(const char *format, ...)
 {
 	va_list original, copy;
-	int n_printed = 0, error = 0;
+	int num = 0, error = 0;
 
 	if (format == NULL || *format == '\0')
 		return (-1);
@@ -25,10 +24,10 @@ int _printf(const char *format, ...)
 		return (error * -1);
 	}
 
-	n_printed = print_out(format, &copy);
+	num = print_out(format, &copy);
 
 	va_end(original);
 	va_end(copy);
 
-	return (n_printed);
+	return (num);
 }
